@@ -1,0 +1,29 @@
+.box1{
+    background-color: #A9927D   ;
+    width: 45%;
+    height: 99%;
+    margin: 5px;
+    }
+    .piechart-box{
+            background-color: #A9927D   ;
+            width: 300px;
+            height: 99%;
+            margin: 10px;
+            
+    }
+    .body{
+        width: 100%;
+        height: 100%;
+    }
+    .row{
+  
+    width: 100%;
+    height: 400px;
+    margin: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+

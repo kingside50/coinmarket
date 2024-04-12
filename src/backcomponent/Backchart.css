@@ -1,0 +1,10 @@
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.H2{
+font-size: 25px;
+color: black;
+font-weight: bold;
+
+}

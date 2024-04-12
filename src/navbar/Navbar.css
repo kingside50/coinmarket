@@ -1,0 +1,22 @@
+.navBar{
+  width: auto;
+  height: 70px;
+    background-color: #5E503F;
+    display: flex;
+    
+  }
+  .header{
+  color: #F0EDEE;
+font-size: 40px;
+align-self: center;
+justify-content: center;
+width: 100%;
+text-align: center;
+  }
+.button{
+  align-self: center;
+  width: 80px;
+  height: 50px;
+  background-color: #A9927D;
+  margin-right: 10px;
+}

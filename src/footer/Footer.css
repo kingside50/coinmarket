@@ -1,0 +1,24 @@
+.footer{
+    width: auto;
+  height: auto;
+    background-color: #5E503F;
+    display: flex;
+    flex-direction: column;
+}
+.email{
+font-size: 20px;
+color: white;
+margin: 5px;
+}
+.nummber{
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+}
+.info{
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+    
+}
