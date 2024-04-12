@@ -14,7 +14,14 @@ Chartjs.register(
     Legend
 );
 
-const PieDiagram = ({ labels, datasets }) => {
+const PieDiagram = ({ coinData }) => {
+  const labels = coinData ? coinData.map(coin => coin.name) : [];
+  const datasets = coinData ? [{
+    label: 'Crypto Prices',
+    data: coinData.map(coin => parseFloat(coin.priceUsd)),
+    backgroundColor: ['#49111C', '#A9927D','#5E503F'],
+  }] : [];
+
   const data = {
     labels: labels,
     datasets: datasets,
@@ -28,12 +35,12 @@ const PieDiagram = ({ labels, datasets }) => {
           plugins: {
             legend: {
               labels: {
-                color: '#0A0908' // Change legend text color to red
+                color: '#0A0908'
               }
             },
             tooltip: {
               titleColor: '#F2F4F3',
-              bodyColor: '#F2F4F3' // Change tooltip text color to blue
+              bodyColor: '#F2F4F3'
             }
           }
         }}
