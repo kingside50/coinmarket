@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import TopCoinsList from './api/Coinlist.jsx'
 import CoinDataFetcher from './api/coincap.jsx';
+import CoinDetailPage from './page/Coinpage.jsx'
 import {Router, Route, Link } from 'react-router-dom';
 import PieDiagram from './Charts/Piechart.jsx';
 import Navbar from './navbar/Navbar';
@@ -49,17 +51,7 @@ const App = () => {
     tension: 0.5
   }
 ]}></LineChart>}></BackChart>
-<BackChart style={"box1"} header={"lineChart"} content={<LineChart labels={['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange',]}
- datasets={[
-  {
-    label: 'BTC',
-    data: [12, 19, 3, 5, 2, 3, 3], // Sample data points
-   
-    backgroundColor: "#49111C",
-    borderColor: '#49111C',
-    tension: 0.5
-  }
-]}></LineChart>}></BackChart>
+<BackChart style={"coinlist-box"} header={"Top 60 coins "} content={<TopCoinsList></TopCoinsList>}></BackChart>
 </div>
      
 
