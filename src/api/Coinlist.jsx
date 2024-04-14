@@ -32,10 +32,7 @@ const TopCoinsList = ({ onFavorite }) => {
     setSearchQuery(event.target.value);
   };
 
-  const getCoinUrl = (coin) => {
-    // Replace this with your logic to determine the URL for each coin detail page
-    return `/coin/${coin.id}`;
-  };
+ 
 
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -53,9 +50,9 @@ const TopCoinsList = ({ onFavorite }) => {
       <ul>
         {filteredCoins.map(coin => (
           <li key={coin.id}>
-            <Link to={getCoinUrl(coin)}>
-              {coin.name} ({coin.symbol})
-            </Link>
+      <Link to={`/coin/${coin.id}`}>
+        {coin.name} ({coin.symbol})
+      </Link>
             <button onClick={() => toggleFavorite(coin.id)}>
               {favorites.includes(coin.id) ? 'Remove from Favorites' : 'Add to Favorites'}
             </button>
