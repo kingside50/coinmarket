@@ -1,8 +1,8 @@
-.card{
+.cards{
     display: flex;
     flex-direction: column;
 }
-.H2{
+.Header{
 font-size: 25px;
 color: black;
 font-weight: bold;

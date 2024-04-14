@@ -1,0 +1,37 @@
+.box1{
+    background-color: #A9927D   ;
+    width: 200px;
+    height: 99%;
+    margin: 5px;
+    }
+    .piechart-box{
+            background-color: #A9927D   ;
+            width: 300px;
+            height: 99%;
+            margin: 10px;
+            
+    }
+    .coinlist-box{
+        background-color: #A9927D   ;
+        width: 45%;
+        height: 99%;
+        margin: 5px;
+        overflow-y: auto;
+    }
+    
+    .row{
+  
+    width: 100%;
+    height: 400px;
+    margin: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+canvas{
+    box-sizing: border-box;
+    display: block;
+    height: 327px;
+    width: 654px;
+}

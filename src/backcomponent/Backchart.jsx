@@ -4,8 +4,8 @@ import './Backchart.css'
 const BackChart = ({style, content,header}) => {
     return(
 <div className={style} >
-  <div className='card'>
-  <div className='H2'>{header}</div>
+  <div className='cards'>
+  <div className='Header'>{header}</div>
   <div>{content}</div>
   </div>
 </div>

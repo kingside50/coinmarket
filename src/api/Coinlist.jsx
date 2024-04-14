@@ -63,7 +63,10 @@ const TopCoinsList = ({ onFavorite }) => {
       <ul>
         {coins.filter(coin => favorites.includes(coin.id)).map(favoriteCoin => (
           <li key={favoriteCoin.id}>
-            {favoriteCoin.name} ({favoriteCoin.symbol})
+              <Link to={`/coin/${favoriteCoin.id}`}>
+              {favoriteCoin.name} ({favoriteCoin.symbol})
+      </Link>
+        
           </li>
         ))}
       </ul>

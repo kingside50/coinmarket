@@ -4,18 +4,22 @@ ul{
 }
 li{
     
-    text-decoration: none;
-    color: black;
+  
     border: 1px solid #5E503F;
     margin: 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+ 
 }
 button{
     align-self: flex-end;
     background-color: #49111C;
     color: #F2F4F3;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }

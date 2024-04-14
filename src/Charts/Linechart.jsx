@@ -1,60 +1,76 @@
-  import React from 'react';
-  import {
-      Chart as Chartjs,
-      LineElement,
-      CategoryScale,
-      LinearScale,
-      PointElement,
-    
-  } from 'chart.js';
-  import { Line } from 'react-chartjs-2';
+import React from 'react';
+import { Line } from 'react-chartjs-2';
+import {
+  Chart as Chartjs,
+LineElement,
+CategoryScale,
+  Tooltip,
+  Legend,
+  LinearScale,
+  PointElement,
 
-  Chartjs.register(
-      LineElement,
-      CategoryScale,
-      LinearScale,
-    PointElement,
-  )
-  const LineChart = ({labels, datasets}) => {
-    // Sample data
-    const data = {
-      labels: labels,
-      datasets: datasets,
-    };
+  
+} from 'chart.js';
+import { Pie } from 'react-chartjs-2';
 
-    const options = {
-      scales: {
-        x: {
-          ticks: {
-            color: '#0A0908'
-          },
-        },
-        y: {
-  ticks: {
-            color: '#0A0908' 
-          }
-        }
+Chartjs.register(
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  Tooltip,
+  Legend
+);
+
+const LineChart = ({ coinData }) => {
+
+  const data = {
+    labels: coinData.map(entry => entry.date), 
+    datasets: [
+      {
+        label: 'BTC Price',
+        data: coinData.map(entry => entry.priceUsd), 
+        fill: false,
+        backgroundColor: '#49111C',
+        borderColor: '#49111C',
+        tension: 0.1,
       },
-      plugins: {
-        legend: {
-        
-          labels: {
-            color: '#0A0908' // Change legend text color to red
-          }
-        },
-        tooltip: {
-          titleColor: '#F2F4F3',
-          bodyColor: '#F2F4F3' // Change tooltip text color to blue
-        }
-      }
-    };
-
-    return (
-      <div>
-           
-        <Line data={data} options={options}/>
-      </div>
-    );
+    ],
   };
 
-  export default LineChart;
+  // Options for the chart
+  const options = {
+    Response: true,
+    scales: {
+      x: {
+        ticks: {
+          color: '#0A0908',
+        },
+      },
+      y: {
+        ticks: {
+          color: '#0A0908',
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        labels: {
+          color: '#0A0908',
+        },
+      },
+      tooltip: {
+        titleColor: '#F2F4F3',
+        bodyColor: '#F2F4F3',
+      },
+    },
+  };
+
+  return (
+    <div>
+      <Line data={data} options={options} />
+    </div>
+  );
+};
+
+export default LineChart;

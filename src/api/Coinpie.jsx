@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const CoinDataFetcher = ({ children }) => {
+const CoinDataPie = ({ children }) => {
   const [coinData, setCoinData] = useState(null);
 
   useEffect(() => {
     const fetchTopCoins = async () => {
       try {
         const response = await axios.get('https://api.coincap.io/v2/assets');
-        const topCoins = response.data.data.slice(0, 10); // Alleen de eerste 10 munten
+        const topCoins = response.data.data.slice(0, 10); // only the first 10 coins
         setCoinData(topCoins);
       } catch (error) {
         console.error('Error fetching top coins:', error);
@@ -31,4 +31,4 @@ const CoinDataFetcher = ({ children }) => {
   );
 };
 
-export default CoinDataFetcher;
+export default CoinDataPie;
